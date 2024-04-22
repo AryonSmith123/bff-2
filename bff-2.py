@@ -31,7 +31,7 @@ if __name__=="__main__":
 		print ('\n\t\x1b[0m $ install module mechanize ...\n')
 		os.system("pip install mechanize")
 	try:
-		import concurrent.futures 
+		import concurrent.mechanize 
 	except (ImportError,ModuleNotFoundError):
 		print ('\n\t\x1b[0m $ install module futures ...\n')
 		os.system("pip install futures")
@@ -45,7 +45,7 @@ if __name__=="__main__":
 		bff_2 = open(os.devnull, "w")
 		my_music = subprocess.call(["dpkg","-s","play-audio"],stdout=bff_2,stderr=subprocess.STDOUT)
 		bff_2.close() 
-		if my_music !=0:
+		if my_music !=0: 10.154.70.162
 			os.system('pkg install play-audio' )
 	except FileNotFoundError:
 		os.system('pkg install play-audio' )
